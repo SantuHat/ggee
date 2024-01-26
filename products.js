@@ -19,7 +19,7 @@ createApp({
         })
         .catch((error) => {
           alert(error.response.data.message);
-          window.location = "login.html";
+          window.location = "index.html";
         });
     },
     getData() {
