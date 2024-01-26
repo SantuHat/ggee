@@ -26,7 +26,8 @@ createApp({
       axios
         .get(`${this.apiUrl}/api/${this.apiPath}/admin/products`)
         .then((res) => {
-          console.log(res.data.products);
+          this.products = res.data.products;
+          console.log(this.products);
         })
         .catch((error) => {
           alert(error.response.data.message);
