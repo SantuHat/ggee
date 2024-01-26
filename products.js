@@ -27,11 +27,13 @@ createApp({
         .get(`${this.apiUrl}/api/${this.apiPath}/admin/products`)
         .then((res) => {
           this.products = res.data.products;
-          console.log(this.products);
         })
         .catch((error) => {
           alert(error.response.data.message);
         });
+    },
+    getDetail(item) {
+      this.tempProduct = item;
     },
   },
   mounted() {
